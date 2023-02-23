@@ -56,7 +56,7 @@
         base_layer {
             label = "Base";
             bindings = <
-&kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp L           &kp U           &kp F           &kp Y           &kp SEMI
+&kp            &kp W           &kp F           &kp P           &kp G           &none           &none           &kp L           &kp U           &kp F           &kp Y           &kp SEMI
 &lh_pht LSFT A  &lh_pht LCTL R  &lh_pht LALT S  &lh_pht LGUI T  &kp D           &none           &none           &kp H           &rh_pht RGUI N  &rh_pht RALT E  &rh_pht RCTL I  &rh_pht RSFT O
 &kp Z           &kp X           &kp C           &kp V           &kp B           &none           &none           &kp K           &kp M           &kp COMMA       &kp DOT         &kp FSLH
                                 &kp LS(TAB)     &lt NAV SPACE   &lt NUM TAB     &none           &none           &lt FUN BSPC    &lt SYM SPACE   &lt MED DEL

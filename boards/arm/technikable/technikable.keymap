@@ -60,7 +60,7 @@
 &kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp L           &kp U           &kp F           &kp Y           &kp SEMI
 &lh_pht LSFT A  &lh_pht LCTL R  &lh_pht LALT S  &lh_pht LGUI T  &kp D           &none           &none           &kp H           &rh_pht RGUI N  &rh_pht RALT E  &rh_pht RCTL I  &rh_pht RSFT O
 &kp Z           &kp X           &kp C           &kp V           &kp B           &none           &none           &kp K           &kp M           &kp COMMA       &kp DOT         &kp FSLH
-                                &kp LS(TAB)     &lt NAV SPACE    &kp TAB     &none           &none           &kp BSPC    &kp SPACE   &kp DEL
+                                &kp LS(TAB)     &lt NAV SPACE    &kp TAB        &none           &none           &kp BSPC        &lt SYM SPACE   &kp DEL
             >;
         };
 
@@ -71,6 +71,16 @@
 &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &trans          &kp LARW        &kp DARW        &kp RARW        &trans
 &trans          &trans          &trans          &kp CAPSLOCK    &trans          &trans          &trans          &trans          &kp HOME        &kp PG_DN       &kp PG_UP       &kp END
                                 &trans          &trans          &trans          &trans          &trans          &trans          &kp RET         &trans
+            >;
+        };
+
+        sym_layer {
+            label = "Sym";
+            bindings = <
+&kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &trans          &trans          &trans          &kp LT          &kp EQUAL       &kp GT          &kp BSLH
+&kp RBRC        &kp LBRC        &kp RPAR        &kp LPAR        &kp UNDER       &trans          &trans          &trans          &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI
+&kp LT          &kp GT          &kp RBRK        &kp LBRK        &kp CARET       &trans          &trans          &trans          &kp DQT         &kp APOS        &kp GRAVE       &kp TILDE
+                                &trans          &kp ESC         &trans          &trans          &trans          &trans          &trans          &trans
             >;
         };
     };

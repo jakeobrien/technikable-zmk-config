@@ -87,9 +87,9 @@
         num_layer {
             label = "Num";
             bindings = <
-&trans          &kp LG(BSPC)    &kp BSPC        &kp ENT         &kp ESC         &trans          &trans          &kp AMPS        &kp N7          &kp N8          &kp N9          &kp PIPE
+&trans          &kp LG(BSPC)    &kp BSPC        &kp RET         &kp ESC         &trans          &trans          &kp AMPS        &kp N7          &kp N8          &kp N9          &kp PIPE
 &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &kp PLUS        &kp N4          &kp N5          &kp N6          &kp MINUS
-&kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LG(A)       &trans          &trans          &kp ASTRK       &kp N1          &kp N2          &kp N3          &kp FSLH
+&kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LG(A)       &trans          &trans          &kp ASTRK       &kp N1          &kp N2          &kp N3          &kp SLASH
                                 &trans          &trans          &trans          &trans          &trans          &kp EQUAL       &kp N0          &kp DOT
             >;
         };

@@ -22,6 +22,8 @@
 &lt { quick-tap-ms = <200>; };
 
 #define BT(n) BT_SEL n
+#define LCA(n) LCTL(LALT(n))
+#define MEH(n) LSFT(LCTL(LALT(n)))
 
 / {
     chosen {
@@ -33,9 +35,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
             tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <200>;
+            global-quick-tap = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <7 8 9 10 11>;    // <---[[right-hand keys]]
         };
@@ -43,9 +46,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
             tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <200>;
+            global-quick-tap = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4>;    // <---[[left-hand keys]]
         };
@@ -57,7 +61,7 @@
         base_layer {
             label = "Base";
             bindings = <
-&kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp L           &kp U           &kp F           &kp Y           &kp SEMI
+&kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp J           &kp L           &kp U           &kp Y           &kp SEMI
 &lh_pht LSFT A  &lh_pht LCTL R  &lh_pht LALT S  &lh_pht LGUI T  &kp D           &none           &none           &kp H           &rh_pht RGUI N  &rh_pht RALT E  &rh_pht RCTL I  &rh_pht RSFT O
 &kp Z           &kp X           &kp C           &kp V           &kp B           &none           &none           &kp K           &kp M           &kp COMMA       &kp DOT         &kp SLASH
                                 &kp LS(TAB)     &lt NAV SPACE   &lt NUM TAB     &none           &none           &lt FUN BSPC    &lt SYM SPACE   &lt MED DEL
@@ -67,9 +71,9 @@
         nav_layer {
             label = "Nav";
             bindings = <
-&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp K_CMENU     &kp UARW        &trans          &trans
+&kp MEH(F13)    &kp LCA(F13)    &kp LCA(F14)    &kp LCA(F15)    &kp LCA(F16     &trans          &trans          &trans          &kp K_CMENU     &kp UARW        &trans          &trans
 &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &trans          &kp LARW        &kp DARW        &kp RARW        &trans
-&trans          &trans          &trans          &kp CAPSLOCK    &trans          &trans          &trans          &trans          &kp HOME        &kp PG_DN       &kp PG_UP       &kp END
+&trans          &trans          &trans          &kp CAPSLOCK    &trans          &trans          &trans          &trans          &kp HOME        &kp PG_UP       &kp PG_DN       &kp END
                                 &trans          &trans          &trans          &trans          &trans          &trans          &kp RET         &trans
             >;
         };
@@ -78,7 +82,7 @@
             label = "Sym";
             bindings = <
 &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &trans          &trans          &trans          &kp LT          &kp EQUAL       &kp GT          &kp BACKSLASH
-&kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp UNDER       &trans          &trans          &trans          &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI
+&kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp UNDER       &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
 &kp LT          &kp GT          &kp LBKT        &kp RBKT        &kp CARET       &trans          &trans          &trans          &kp DQT         &kp SQT         &kp GRAVE       &kp TILDE
                                 &trans          &kp ESC         &trans          &trans          &trans          &trans          &trans          &trans
             >;
@@ -98,7 +102,7 @@
             label = "Fun";
             bindings = <
 &kp F9          &kp F10         &kp F11         &kp F12         &kp F18         &trans          &trans          &trans          &trans          &trans          &trans          &trans
-&kp F5          &kp F6          &kp F7          &kp F8          &kp F17         &trans          &trans          &trans          &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI
+&kp F5          &kp F6          &kp F7          &kp F8          &kp F17         &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
 &kp F1          &kp F2          &kp F3          &kp F4          &kp F16         &trans          &trans          &trans          &trans          &trans          &trans          &trans
                                 &kp F13         &kp F14         &kp F15         &trans          &trans          &trans          &trans          &trans
             >;

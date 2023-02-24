@@ -71,7 +71,7 @@
         nav_layer {
             label = "Nav";
             bindings = <
-&kp MEH(F13)    &kp LCA(F13)    &kp LCA(F14)    &kp LCA(F15)    &kp LCA(F16)    &trans          &trans          &trans          &kp K_CMENU     &kp UARW        &trans          &trans
+&kp LSFT(LCTL(LALT(F13))) &kp LCTL(LALT(F13)) &kp LCTL(LALT(F14)) &kp LCTL(LALT(F15)) &kp LCTL(LALT(F16)) &trans &trans &trans  &kp K_CMENU     &kp UARW        &trans          &trans
 &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &trans          &kp LARW        &kp DARW        &kp RARW        &trans
 &trans          &trans          &trans          &kp CAPSLOCK    &trans          &trans          &trans          &trans          &kp HOME        &kp PG_UP       &kp PG_DN       &kp END
                                 &trans          &trans          &trans          &trans          &trans          &trans          &kp RET         &trans

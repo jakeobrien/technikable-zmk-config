@@ -22,8 +22,8 @@
 &lt { quick-tap-ms = <200>; };
 
 #define BT(n) BT_SEL n
-#define LCA(n) LCTL(LALT(n))
-#define MEH(n) LSFT(LCTL(LALT(n)))
+#define LCA(n) LC(LA(n))
+#define MEH(n) LS(LC(LA(n)))
 
 / {
     chosen {
@@ -38,7 +38,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <200>;
-            global-quick-tap = <150>;
+            global-quick-tap;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <7 8 9 10 11>;    // <---[[right-hand keys]]
         };
@@ -49,7 +49,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <200>;
-            global-quick-tap = <150>;
+            global-quick-tap;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4>;    // <---[[left-hand keys]]
         };
@@ -71,7 +71,7 @@
         nav_layer {
             label = "Nav";
             bindings = <
-&trans &kp LC(LA(F13))      &trans          &trans        &trans         &trans          &trans         &trans          &kp K_CMENU     &kp UARW        &trans          &trans
+&trans &kp LCA(F13)      &trans          &trans        &trans         &trans          &trans         &trans          &kp K_CMENU     &kp UARW        &trans          &trans
 &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &trans          &kp LARW        &kp DARW        &kp RARW        &trans
 &trans          &trans          &trans          &kp CAPSLOCK    &trans          &trans          &trans          &trans          &kp HOME        &kp PG_UP       &kp PG_DN       &kp END
                                 &trans          &trans          &trans          &trans          &trans          &trans          &kp RET         &trans

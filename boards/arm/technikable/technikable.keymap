@@ -55,7 +55,15 @@
         };
     };
 
-
+    macros {
+        jump_left : jump_left {
+            label = "jump_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LARW>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";

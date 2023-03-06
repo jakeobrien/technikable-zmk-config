@@ -63,6 +63,27 @@
             bindings
                 = <&macro_tap &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW>;
         };
+        jump_left: jump_right {
+            label = "jump_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW>;
+        };
+        jump_left: jump_down {
+            label = "jump_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp DARW &kp DARW &kp DARW &kp DARW &kp DARW>;
+        };
+        jump_left: jump_up {
+            label = "jump_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp UARW &kp UARW &kp UARW &kp UARW &kp UARW>;
+        };
     };
 
     keymap {

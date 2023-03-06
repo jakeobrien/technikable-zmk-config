@@ -55,6 +55,37 @@
         };
     };
 
+    macros {
+        jump_left : jump_left {
+            label = "jump_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW>;
+        };
+        jump_left : jump_right {
+            label = "jump_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW>;
+        };
+        jump_left : jump_down {
+            label = "jump_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp DARW &kp DARW &kp DARW &kp DARW &kp DARW>;
+        };
+        jump_left : jump_up {
+            label = "jump_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp UARW &kp UARW &kp UARW &kp UARW &kp UARW>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -71,10 +102,10 @@
         nav_layer {
             label = "Nav";
             bindings = <
-&kp MEH(F13)    &kp LCA(F13)    &kp LCA(F14)    &kp LCA(F15)    &kp LCA(F16)    &trans          &trans         &trans          &kp K_CMENU     &kp UARW        &trans          &trans
-&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &trans          &kp LARW        &kp DARW        &kp RARW        &trans
-&trans          &trans          &trans          &kp CAPSLOCK    &trans          &trans          &trans          &trans          &kp HOME        &kp PG_UP       &kp PG_DN       &kp END
-                                &trans          &trans          &trans          &trans          &trans          &trans          &kp RET         &trans
+&kp MEH(F13)    &kp LCA(F13)    &kp LCA(F14)    &kp LCA(F15)    &kp LCA(F16)    &trans          &trans          &trans          &jump_up        &kp UARW        &jump_down      &trans
+&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &jump_left      &kp LARW        &kp DARW        &kp RARW        &jump_right
+&trans          &trans          &trans          &kp ESC         &trans          &trans          &trans          &trans          &kp HOME        &kp PG_UP       &kp PG_DN       &kp END
+                                &trans          &trans          &trans          &trans          &trans          &trans          &kp RET         &kp SCROLLLOCK
             >;
         };
 
@@ -84,7 +115,7 @@
 &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &trans          &trans          &trans          &kp LT          &kp EQUAL       &kp GT          &kp BACKSLASH
 &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp UNDER       &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
 &kp LT          &kp GT          &kp LBKT        &kp RBKT        &kp CARET       &trans          &trans          &trans          &kp DQT         &kp SQT         &kp GRAVE       &kp TILDE
-                                &trans          &kp ESC         &trans          &trans          &trans          &trans          &trans          &trans
+                                &kp CAPSLOCK    &kp ESC         &kp LG(LA(LS(F18)))  &trans     &trans          &trans          &trans          &trans
             >;
         };
 
@@ -92,7 +123,7 @@
             label = "Num";
             bindings = <
 &trans          &kp LG(BSPC)    &kp BSPC        &kp RET         &kp ESC         &trans          &trans          &kp AMPS        &kp N7          &kp N8          &kp N9          &kp PIPE
-&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &kp PLUS        &kp N4          &kp N5          &kp N6          &kp MINUS
+&kp LS(LG(Z))   &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &kp PLUS        &kp N4          &kp N5          &kp N6          &kp MINUS
 &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LG(A)       &trans          &trans          &kp ASTRK       &kp N1          &kp N2          &kp N3          &kp SLASH
                                 &trans          &trans          &trans          &trans          &trans          &kp EQUAL       &kp N0          &kp DOT
             >;
@@ -114,8 +145,8 @@
             bindings = <
 &trans          &trans          &kp C_BRI_UP    &kp C_VOL_UP    &reset          &trans          &trans          &trans          &trans          &trans          &trans          &trans
 &trans          &trans          &kp C_BRI_DN    &kp C_VOL_DN    &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
-&bt BT(0)       &bt BT(1)       &bt BT(2)       &bt BT(3)       &bt BT(3)       &bt BT_CLR      &trans          &trans          &trans          &trans          &trans          &trans
-                                &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&bt BT(0)       &bt BT(1)       &bt BT(2)       &bt BT(3)       &bt BT_CLR      &trans          &trans          &trans          &trans          &trans          &trans          &trans
+                                &kp C_PREV      &kp C_PP        &kp C_NEXT      &trans          &trans          &trans          &trans          &trans
             >;
         };
     };

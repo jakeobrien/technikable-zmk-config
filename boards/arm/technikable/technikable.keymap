@@ -56,10 +56,13 @@
     };
 
     macros {
-        ZMK_MACR(jump_left,
+        jump_left: jump_left {
+            label = "jump_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LARW>;
-        )
+                = <&macro_tap &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW>;
+        };
     };
 
     keymap {

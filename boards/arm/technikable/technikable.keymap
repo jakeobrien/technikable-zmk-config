@@ -31,27 +31,15 @@
     };
 
     behaviors {
-        lh_pht: left_hand_positional_hold_tap {
+        hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_HOLD_TAP";
+            label = "HOMEROW_MODS";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            tapping-term-ms = <200>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <100>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
-            // hold-trigger-key-positions = <7 8 9 10 11>;    // <---[[right-hand keys]]
-        };
-        rh_pht: right_hand_positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_POSITIONAL_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-            quick-tap-ms = <100>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
-            // hold-trigger-key-positions = <0 1 2 3 4>;    // <---[[left-hand keys]]
         };
     };
 
@@ -97,7 +85,7 @@
             label = "Base";
             bindings = <
 &kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp J           &kp L           &kp U           &kp Y           &kp SEMI
-&lh_pht LSFT A  &lh_pht LCTL R  &lh_pht LALT S  &lh_pht LGUI T  &kp D           &none           &none           &kp H           &rh_pht RGUI N  &rh_pht RALT E  &rh_pht RCTL I  &rh_pht RSFT O
+&hm LSFT A      &hm LCTL R      &hm LALT S      &hm LGUI T      &kp D           &none           &none           &kp H           &hm RGUI N      &hm RALT E      &hm RCTL I      &hm RSFT O
 &kp Z           &kp X           &kp C           &kp V           &kp B           &none           &none           &kp K           &kp M           &kp COMMA       &kp DOT         &kp SLASH
                                 &kp LS(TAB)     &lt NAV SPACE   &lt NUM TAB     &none           &none           &lt FUN BSPC    &lt SYM SPACE   &lt MED DEL
             >;
@@ -119,7 +107,7 @@
 &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &trans          &trans          &trans          &kp LT          &kp EQUAL       &kp GT          &kp BACKSLASH
 &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp UNDER       &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
 &kp LT          &kp GT          &kp LBKT        &kp RBKT        &kp CARET       &trans          &trans          &trans          &kp DQT         &kp SQT         &kp GRAVE       &kp TILDE
-                           &kp LG(LA(LS(F18)))  &kp ESC         &kp CAPSLOCK    &trans          &trans          &trans          &trans          &trans
+                           &kp LG(LA(LS(F18)))  &kp ESC         &kp CAPSLOCK    &kp SCLK        &trans          &trans          &trans          &trans
             >;
         };
 
@@ -147,9 +135,9 @@
         med_layer {
             label = "Med";
             bindings = <
-&trans          &trans          &kp C_BRI_UP    &kp C_VOL_UP    &reset          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &trans          &kp C_BRI_UP    &kp C_VOL_UP    &reset          &trans          &trans          &trans          &trans          &trans          &trans          &sys_reset
 &trans          &trans          &kp C_BRI_DN    &kp C_VOL_DN    &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
-&bt BT(0)       &bt BT(1)       &bt BT(2)       &bt BT(3)       &bt BT_CLR      &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &trans          &trans          &kp C_MUTE      &trans          &trans          &trans          &bt BT_CLR      &bt BT(0)       &bt BT(1)       &bt BT(2)       &bt BT(3)
                                 &kp C_PREV      &kp C_PP        &kp C_NEXT      &trans          &trans          &trans          &trans          &trans
             >;
         };

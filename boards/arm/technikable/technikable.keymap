@@ -135,7 +135,7 @@
         med_layer {
             label = "Med";
             bindings = <
-&trans          &trans          &kp C_BRI_UP    &kp C_VOL_UP    &reset          &trans          &trans          &trans          &trans          &trans          &trans          &sys_reset
+&trans          &trans          &kp C_BRI_UP    &kp C_VOL_UP    &trans          &trans          &trans          &trans          &trans          &trans          &trans          &sys_reset
 &trans          &trans          &kp C_BRI_DN    &kp C_VOL_DN    &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
 &trans          &trans          &trans          &kp C_MUTE      &trans          &trans          &trans          &bt BT_CLR      &bt BT(0)       &bt BT(1)       &bt BT(2)       &bt BT(3)
                                 &kp C_PREV      &kp C_PP        &kp C_NEXT      &trans          &trans          &trans          &trans          &trans

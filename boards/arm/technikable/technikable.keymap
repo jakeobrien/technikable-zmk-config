@@ -94,8 +94,8 @@
         nav_layer {
             label = "Nav";
             bindings = <
-&kp MEH(F13)    &kp LCA(F13)    &kp LCA(F14)    &kp LCA(F15)    &kp LCA(F16)    &trans          &trans          &trans          &jump_up        &kp UARW        &jump_down      &trans
-&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &jump_left      &kp LARW        &kp DARW        &kp RARW        &jump_right
+&kp MEH(F13)    &kp LCA(F13)    &kp LCA(F14)    &kp LCA(F15)    &kp LCA(F16)    &trans          &trans          &trans          &trans          &kp UARW        &trans      &trans
+&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &trans          &kp LARW        &kp DARW        &kp RARW        &trans
 &kp MEH(F1)     &kp MEH(F2)     &kp MEH(F3)     &kp MEH(F4)     &kp MEH(F5)     &trans          &trans          &trans          &kp HOME        &kp PG_UP       &kp PG_DN       &kp END
                                 &trans          &trans          &trans          &trans          &trans          &trans          &kp RET         &trans
             >;

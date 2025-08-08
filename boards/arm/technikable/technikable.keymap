@@ -32,7 +32,7 @@
 
 / {
     chosen {
-       zmk,matrix_transform = &ortho_transform;
+       zmk,physical-layout = &technikable_ortho_layout;
     };
 
     behaviors {

@@ -136,7 +136,7 @@
             >;
         };
 
-        nav_layer {
+        mse_layer {
             label = "Mouse";
             bindings = <
 &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &msc SCRL_UP    &mmv MOVE_UP  &trans          &trans

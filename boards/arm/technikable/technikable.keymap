@@ -17,7 +17,7 @@
 #define NUM 3
 #define FUN 4
 #define MSE 5
-#define SPC 6
+#define HYP 6
 #define ADM 7
 #define WSD 8
 
@@ -92,7 +92,7 @@
 &kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp J           &kp L           &kp U           &kp Y           &kp SEMI
 &hm LSFT A      &hm LCTL R      &hm LALT S      &hm LGUI T      &kp D           &to WSD         &to WSD         &kp H           &hm RGUI N      &hm RALT E      &hm RCTL I      &hm RSFT O
 &kp Z           &kp X           &kp C           &kp V           &kp B           &to ADM         &to ADM         &kp K           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                               &lt MSE LS(TAB)  &lt NAV SPACE   &lt NUM TAB     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt SPC DEL
+                               &lt MSE LS(TAB)  &lt NAV SPACE   &lt NUM TAB     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt HYP DEL
             >;
         };
 
@@ -146,8 +146,8 @@
             >;
         };
 
-        spc_layer {
-            label = "Special";
+        hyp_layer {
+            label = "Hyper";
             bindings = <
 &kp HPR(F9)     &kp HPR(F10)    &kp HPR(F11)    &kp HPR(F12)    &kp HPR(F18)    &trans          &trans          &trans          &trans          &trans          &trans          &trans
 &kp HPR(F5)     &kp HPR(F6)     &kp HPR(F7)     &kp HPR(F8)     &kp HPR(F17)    &trans          &trans          &trans          &trans          &trans          &trans

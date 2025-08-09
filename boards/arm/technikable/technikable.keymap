@@ -89,7 +89,7 @@
         base_layer {
             label = "Default";
             bindings = <
-&kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp J           &kp L           &kp U           &kp Y           &kp SEMI
+&kp Q           &kp W           &kp( F           &kp P           &kp G           &none           &none           &kp J           &kp L           &kp U           &kp Y           &kp SEMI
 &hm LSFT A      &hm LCTL R      &hm LALT S      &hm LGUI T      &kp D           &to WSD         &to WSD         &kp H           &hm RGUI N      &hm RALT E      &hm RCTL I      &hm RSFT O
 &kp Z           &kp X           &kp C           &kp V           &kp B           &to ADM         &to ADM         &kp K           &kp M           &kp COMMA       &kp DOT         &kp SLASH
                                &lt MSE LS(TAB)  &lt NAV SPACE   &lt NUM TAB     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt HYP DEL

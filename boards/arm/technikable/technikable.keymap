@@ -140,9 +140,9 @@
         mse_layer {
             label = "Mouse";
             bindings = <
-&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans         &trans          &trans
-&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &trans          &trans          &trans         &trans          &trans
-&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans         &trans          &trans
+&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &msc SCRL_UP    &mmv MOVE_UP   &trans          &trans
+&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_RIGHT
+&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &msc SCRL_DOWN  &trans         &trans          &trans
                                 &trans          &trans          &trans          &trans          &trans          &mkp MCLK       &mkp LCLK       &mkp RCLK
             >;
         };

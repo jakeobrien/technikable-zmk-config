@@ -1,9 +1,7 @@
 ---
 include:
   - board: technikable
-    - cmake-args: -DCONFIG_ZMK_POINTING=y
   - board: technikable@1.1
-    - cmake-args: -DCONFIG_ZMK_POINTING=y
   # - board: technikable
   #   snippet: studio-rpc-usb-uart
   #   cmake-args: -DCONFIG_ZMK_STUDIO=y

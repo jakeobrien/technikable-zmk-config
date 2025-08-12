@@ -28,7 +28,6 @@
 #define BT(n) BT_SEL n
 #define LCA(n) LC(LA(n))
 #define MEH(n) LS(LC(LA(n)))
-#define MEH(n) LS(LC(LA(n)))
 #define HPR(n) LS(LC(LA(LG(n))))
 
 / {
@@ -130,10 +129,10 @@
         fun_layer {
             label = "Fun";
             bindings = <
-&kp F9          &kp F10         &kp F11         &kp F12         &kp F18         &trans          &trans          &trans          &trans          &trans          &trans          &trans
-&kp F5          &kp F6          &kp F7          &kp F8          &kp F17         &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
-&kp F1          &kp F2          &kp F3          &kp F4          &kp F16         &trans          &trans          &trans          &trans          &trans          &trans          &trans
-                                &kp F13         &kp F14         &kp F15         &trans          &trans          &trans          &trans          &trans
+&trans          &kp F7          &kp F8          &kp F9          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &kp F4          &kp F5          &kp F6          &trans          &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
+&trans          &kp F1          &kp F2          &kp F3          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+                                &kp F10         &kp F11         &kp F12         &trans          &trans          &trans          &trans          &trans
             >;
         };
 
@@ -150,10 +149,10 @@
         hyp_layer {
             label = "Hyper";
             bindings = <
-&kp HPR(F9)     &kp HPR(F10)    &kp HPR(F11)    &kp HPR(F12)    &kp HPR(F18)    &trans          &trans          &trans          &trans          &trans          &trans          &trans
-&kp HPR(F5)     &kp HPR(F6)     &kp HPR(F7)     &kp HPR(F8)     &kp HPR(F17)    &trans          &trans          &trans          &trans          &trans          &trans
-&kp HPR(F1)     &kp HPR(F2)     &kp HPR(F3)     &kp HPR(F4)     &kp HPR(F16)    &trans          &trans          &trans          &trans          &trans          &trans
-                                &kp HPR(F13)    &kp HPR(F14)    &kp HPR(F15)    &trans          &trans          &trans          &trans          &trans
+&trans          &kp F19         &kp F20         &kp F21        &kp F18         &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &kp F16         &kp F17         &kp F18        &kp F17         &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &kp F13         &kp F14         &kp F15        &kp F16         &trans          &trans          &trans          &trans          &trans          &trans
+                                &kp F22         &kp F23        &kp F24         &trans          &trans          &trans          &trans          &trans
             >;
         };
 

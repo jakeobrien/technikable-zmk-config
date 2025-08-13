@@ -149,10 +149,10 @@
         hyp_layer {
             label = "Hyper";
             bindings = <
-&trans          &kp F19         &kp F20         &kp F21        &trans          &trans          &trans          &trans          &kp HPR(N9)     &kp HPR(MINUS)  &kp HPR(EQUAL)  &kp HPR(BACKSLASH)
-&trans          &kp F16         &kp F17         &kp F18        &trans          &trans          &trans          &trans          &kp HPR(N5)     &kp HPR(N6)     &kp HPR(N7)     &kp HPR(N8)
-&trans          &kp F13         &kp F14         &kp F15        &trans          &trans          &trans          &trans          &kp HPR(N1)     &kp HPR(N2)     &kp HPR(N3)     &kp HPR(N4)
-                                &kp F22         &kp F23        &kp F24         &trans          &trans          &trans          &trans          &trans
+&kp PSCRN       &kp F19         &kp F20         &kp F21        &kp K_APP       &trans          &trans          &trans          &kp HPR(N9)     &kp HPR(MINUS)  &kp HPR(EQUAL)  &kp HPR(BACKSLASH)
+&kp LSLCK       &kp F16         &kp F17         &kp F18        &kp PAUSE_BREAK &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
+&kp INS         &kp F13         &kp F14         &kp F15        &kp KP_N1       &trans          &trans          &trans          &kp HPR(N1)     &kp HPR(N2)     &kp HPR(N3)     &kp HPR(N4)
+                                &kp F22         &kp KP_N1      &kp F24         &trans          &trans          &trans          &trans          &trans
             >;
         };
 

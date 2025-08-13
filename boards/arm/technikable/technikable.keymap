@@ -147,7 +147,7 @@
             >;
         };
 
-        hyp_layer {
+        spa_layer {
             label = "SpecialA";
             bindings = <
 &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp LS(LC(N7))  &kp LS(LC(N8))  &kp LS(LC(N9))  &trans
@@ -157,7 +157,7 @@
             >;
         };
 
-        hyp_layer {
+        spb_layer {
             label = "SpecialB";
             bindings = <
 &trans  &kp LS(LC(GRAVE)) &kp LS(LC(MINUS)) &kp LS(LC(BACKSLASH)) &trans       &trans          &trans          &trans          &trans          &trans          &trans          &trans

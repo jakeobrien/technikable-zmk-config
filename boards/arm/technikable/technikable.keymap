@@ -27,7 +27,8 @@
 &lt { quick-tap-ms = <200>; };
 
 #define BT(n) BT_SEL n
-#define LCA(n) LC(LA(n))
+#define SC(n) LS(LC(n))
+#define CA(n) LC(LA(n))
 #define MEH(n) LS(LC(LA(n)))
 #define HPR(n) LS(LC(LA(LG(n))))
 
@@ -93,14 +94,14 @@
 &kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp J           &kp L           &kp U           &kp Y           &kp SEMI
 &hm LSFT A      &hm LCTL R      &hm LALT S      &hm LGUI T      &kp D           &to WSD         &to WSD         &kp H           &hm RGUI N      &hm RALT E      &hm RCTL I      &hm RSFT O
 &kp Z           &kp X           &kp C           &kp V           &kp B           &to ADM         &to ADM         &kp K           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                               &lt SPA LS(TAB)  &lt NAV SPACE   &lt NUM TAB     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt SPB DEL
+                                &lt SPA LS(TAB) &lt NAV SPACE   &lt NUM TAB     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt SPB DEL
             >;
         };
 
         nav_layer {
             label = "Nav";
             bindings = <
-&kp MEH(F13)    &kp LCA(F13)    &kp LCA(F14)    &kp LCA(F15)    &kp LCA(F16)    &trans          &trans          &trans          &kp PG_UP       &kp UARW        &kp HOME        &trans
+&kp MEH(F13)    &kp CA(F13)     &kp CA(F14)     &kp CA(F15)     &kp CA(F16)     &trans          &trans          &trans          &kp PG_UP       &kp UARW        &kp HOME        &trans
 &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &kp CAPS        &kp LARW        &kp DARW        &kp RARW        &trans
 &trans          &trans          &trans          &mo MSE         &trans          &trans          &trans          &trans          &kp PG_DN       &trans          &kp END         &trans
                                 &trans          &trans          &trans          &trans          &trans          &kp BSPC        &kp RET         &kp DEL
@@ -120,7 +121,7 @@
         sym_layer {
             label = "Sym";
             bindings = <
-&kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &trans          &trans          &trans          &kp LT          &kp EQUAL       &kp GT          &kp BACKSLASH
+&kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &trans          &trans          &trans          &kp LT          &kp EQUAL       &kp GT          &kp BSLH 
 &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp UNDER       &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
 &kp LT          &kp GT          &kp LBKT        &kp RBKT        &kp CARET       &trans          &trans          &trans          &kp DQT         &kp SQT         &kp GRAVE       &kp TILDE
                                 &trans          &kp ESC         &trans          &trans          &trans          &trans          &trans          &trans
@@ -150,20 +151,20 @@
         spa_layer {
             label = "SpecialA";
             bindings = <
-&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp LS(LC(N7))  &kp LS(LC(N8))  &kp LS(LC(N9))  &trans
-&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &trans          &kp LS(LC(N4))  &kp LS(LC(N5))  &kp LS(LC(N6))  &trans
-&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp LS(LC(N1))  &kp LS(LC(N2))  &kp LS(LC(N3))  &trans
-                                &trans          &trans          &trans          &trans          &trans          &trans          &kp LS(LC(N0))  &trans
+&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp SC(N7)      &kp SC(N8)      &kp SC(N9)      &trans
+&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &trans          &kp SC(N4)      &kp SC(N5)      &kp SC(N6)      &trans
+&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp SC(N1)      &kp SC(N2)      &kp SC(N3)      &trans
+                                &trans          &trans          &trans          &trans          &trans          &trans          &kp SC(N0)      &trans
             >;
         };
 
         spb_layer {
             label = "SpecialB";
             bindings = <
-&trans  &kp LS(LC(GRAVE)) &kp LS(LC(MINUS)) &kp LS(LC(BACKSLASH)) &trans       &trans          &trans          &trans          &trans          &trans          &trans          &trans
-&trans          &kp LS(F20)     &kp LS(LC(F19)) &kp LS(LC(F20)) &trans         &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
-&trans          &kp F19         &kp F20         &kp LS(F19)    &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
-                                &trans          &trans         &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &kp F20         &kp LS(F20)     &kp SC(F20)     &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &kp F19         &kp LS(F19)     &kp SC(F19)     &trans          &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
+&trans          &kp SC(GRAVE)   &kp SC(MINUS)   &kp SC(EQUAL)   &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+                                &trans          &kp SC(BSLH)    &trans          &trans          &trans          &trans          &trans          &trans
             >;
         };
 
@@ -180,10 +181,10 @@
         wsd_layer {
             label = "WASD";
             bindings = <
-&kp Q          &kp W            &kp E          &kp R           &kp T            &trans          &trans          &kp Y           &kp U           &kp I           &kp O           &kp P
-&kp A          &kp S            &kp D          &kp F           &kp G            &trans          &trans          &kp H           &kp J           &kp K           &kp L           &kp SEMI  
-&kp Z          &kp X            &kp C          &kp V           &kp B            &trans          &trans          &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH  
-                                &kp ESC        &kp SPACE       &kp TAB          &to DEF         &to DEF         &kp BSPC        &kp SPACE       &kp RET  
+&kp Q           &kp W           &kp E           &kp R           &kp T           &trans          &trans          &kp Y           &kp U           &kp I           &kp O           &kp P
+&kp A           &kp S           &kp D           &kp F           &kp G           &trans          &trans          &kp H           &kp J           &kp K           &kp L           &kp SEMI  
+&kp Z           &kp X           &kp C           &kp V           &kp B           &trans          &trans          &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH  
+                                &kp ESC         &kp SPACE       &kp TAB         &to DEF         &to DEF         &kp BSPC        &kp SPACE       &kp RET  
             >;
         };
 

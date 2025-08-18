@@ -18,16 +18,18 @@
 #define SYM 3
 #define NUM 4
 #define FUN 5
-#define SPA 6
-#define SPB 7
-#define ADM 8
-#define WSD 9
+#define WNA 6
+#define WNB 7
+#define SPC 8
+#define ADM 9
+#define WSD 10
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick-tap-ms = <200>; };
 
 #define BT(n) BT_SEL n
 #define SC(n) LS(LC(n))
+#define SA(n) LS(LA(n))
 #define CA(n) LC(LA(n))
 #define MEH(n) LS(LC(LA(n)))
 #define HPR(n) LS(LC(LA(LG(n))))
@@ -94,7 +96,7 @@
 &kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp J           &kp L           &kp U           &kp Y           &kp SEMI
 &hm LSFT A      &hm LCTL R      &hm LALT S      &hm LGUI T      &kp D           &to WSD         &to WSD         &kp H           &hm RGUI N      &hm RALT E      &hm RCTL I      &hm RSFT O
 &kp Z           &kp X           &kp C           &kp V           &kp B           &to ADM         &to ADM         &kp K           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                &lt SPA LS(TAB) &lt NAV SPACE   &lt NUM TAB     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt SPB DEL
+                                &lt SPC LS(TAB) &lt NAV SPACE   &lt NUM TAB     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt WNA DEL
             >;
         };
 
@@ -141,30 +143,40 @@
         fun_layer {
             label = "Fun";
             bindings = <
-&kp F9          &kp F10         &kp F11         &kp F12         &kp F18         &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&kp F9          &kp F10         &kp F11         &kp F12         &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
 &kp F5          &kp F6          &kp F7          &kp F8          &kp F17         &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
 &kp F1          &kp F2          &kp F3          &kp F4          &kp F16         &trans          &trans          &trans          &trans          &trans          &trans          &trans
                                 &kp F13         &kp F14         &kp F15         &trans          &trans          &trans          &trans          &trans
             >;
         };
 
-        spa_layer {
-            label = "SpecialA";
+        wna_layer {
+            label = "WinA";
             bindings = <
-&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp SC(N7)      &kp SC(N8)      &kp SC(N9)      &trans
-&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &trans          &kp SC(N4)      &kp SC(N5)      &kp SC(N6)      &trans
-&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp SC(N1)      &kp SC(N2)      &kp SC(N3)      &trans
-                                &trans          &trans          &trans          &trans          &trans          &trans          &kp SC(N0)      &trans
+&trans          &kp F20         &kp LS(F20)     &kp LC(F20)     &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &kp F19         &kp LS(F19)     &kp LC(F19)     &trans          &trans          &trans          &trans          &kp RGUI        &kp RALT        &none           &mo WNB
+&trans          &kp F18         &kp LS(F18)     &kp LC(F18)     &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+                                &trans          &kp SC(F18)     &trans          &trans          &trans          &trans          &trans          &trans
             >;
         };
 
-        spb_layer {
-            label = "SpecialB";
+        wnb_layer {
+            label = "WinB";
             bindings = <
-&trans          &kp F20         &kp LS(F20)     &kp SC(F20)     &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
-&trans          &kp F19         &kp LS(F19)     &kp SC(F19)     &trans          &trans          &trans          &trans          &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
-&trans          &kp SC(GRAVE)   &kp SC(MINUS)   &kp SC(EQUAL)   &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
-                                &trans          &kp SC(BSLH)    &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &kp MEH(GRAVE)  &kp MEH(MINUS)  &kp MEH(EQUAL)  &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &kp SC(GRAVE)   &kp SC(MINUS)   &kp SC(EQUAL)   &trans          &trans          &trans          &trans          &kp RGUI        &none           &none           &none
+&trans          &kp SC(BSLH)    &kp MEH(BSLH)   &kp SC(F20)     &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+                                &trans          &kp SC(F19)     &trans          &trans          &trans          &trans          &trans          &trans
+            >;
+        };
+
+        spc_layer {
+            label = "Special";
+            bindings = <
+&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp SC(N7)      &kp SC(N8)      &kp SC(N9)      &trans
+&none           &none           &kp LALT        &kp LGUI        &trans          &trans          &trans          &trans          &kp SC(N4)      &kp SC(N5)      &kp SC(N6)      &trans
+&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp SC(N1)      &kp SC(N2)      &kp SC(N3)      &trans
+                                &trans          &trans          &trans          &trans          &trans          &trans          &kp SC(N0)      &trans
             >;
         };
 

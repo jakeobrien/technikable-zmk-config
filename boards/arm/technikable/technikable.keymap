@@ -20,7 +20,7 @@
 #define FUN 5
 #define WNA 6
 #define WNB 7
-#define SPC 8
+#define ADM 8
 #define WSD 9
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace

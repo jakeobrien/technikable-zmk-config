@@ -51,41 +51,6 @@
         };
     };
 
-    macros {
-        jump_left: jump_left {
-            label = "jump_left";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <33>;
-            bindings
-                = <&macro_tap &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW &kp LARW>;
-        };
-        jump_right: jump_right {
-            label = "jump_right";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <33>;
-            bindings
-                = <&macro_tap &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW &kp RARW>;
-        };
-        jump_down: jump_down {
-            label = "jump_down";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <66>;
-            bindings
-                = <&macro_tap &kp DARW &kp DARW &kp DARW &kp DARW &kp DARW>;
-        };
-        jump_up: jump_up {
-            label = "jump_up";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <66>;
-            bindings
-                = <&macro_tap &kp UARW &kp UARW &kp UARW &kp UARW &kp UARW>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -95,7 +60,7 @@
 &kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp J           &kp L           &kp U           &kp Y           &kp SEMI
 &hm LSFT A      &hm LCTL R      &hm LALT S      &hm LGUI T      &kp D           &to WSD         &to WSD         &kp H           &hm RGUI N      &hm RALT E      &hm RCTL I      &hm RSFT O
 &kp Z           &kp X           &kp C           &kp V           &kp B           &to ADM         &to ADM         &kp K           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                &lt ADM LS(TAB) &lt NAV SPACE   &lt NUM TAB     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt WNA DEL
+                                &lt ADM ESC     &lt NAV SPACE   &lt NUM TAB     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt WNA DEL
             >;
         };
 
@@ -104,7 +69,7 @@
             bindings = <
 &kp MEH(F13)    &kp CA(F13)     &kp CA(F14)     &kp CA(F15)     &kp CA(F16)     &none           &none           &none           &kp PG_UP       &kp UARW        &kp HOME        &none 
 &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &kp CAPS        &kp LARW        &kp DARW        &kp RARW        &none 
-&none           &none           &none           &mo MSE         &trans          &trans          &trans          &none           &kp PG_DN       &none           &kp END         &none 
+&none           &none           &none           &kp LS(SEMI)    &mo MSE         &trans          &trans          &none           &kp PG_DN       &none           &kp END         &none 
                                 &none           &trans          &none           &trans          &trans          &kp BSPC        &kp RET         &kp DEL
             >;
         };
@@ -122,9 +87,9 @@
         sym_layer {
             label = "Sym";
             bindings = <
-&kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &none           &none           &none           &kp LT          &kp EQUAL       &kp GT          &kp BSLH 
+&kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &none           &none           &none           &kp LT          &kp EQUAL       &kp GT          &kp TILDE
 &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp UNDER       &trans          &trans          &none           &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
-&kp LT          &kp GT          &kp LBKT        &kp RBKT        &kp CARET       &trans          &trans          &none           &kp DQT         &kp SQT         &kp GRAVE       &kp TILDE
+&kp LT          &kp GT          &kp LBKT        &kp RBKT        &kp CARET       &trans          &trans          &none           &kp DQT         &kp SQT         &kp GRAVE       &kp BSLH
                                 &none           &kp ESC         &none           &trans          &trans          &none           &trans          &none 
             >;
         };
@@ -175,7 +140,7 @@
 &sys_reset      &none           &none           &studio_unlock  &none           &none           &none           &kp C_BRI_UP    &kp SC(N7)      &kp SC(N8)      &kp SC(N9)      &kp C_VOL_UP 
 &none           &none           &kp LALT        &kp LGUI        &none           &trans          &trans          &kp C_BRI_DN    &kp SC(N4)      &kp SC(N5)      &kp SC(N6)      &kp C_VOL_DN 
 &none           &bt BT(0)       &bt BT(1)       &bt BT(2)       &bt BT_CLR      &trans          &trans          &none           &kp SC(N1)      &kp SC(N2)      &kp SC(N3)      &kp C_MUTE 
-                                &trans          &none           &none           &none           &none           &none           &kp SC(N0)      &none 
+                                &trans          &none           &none           &to DEF         &to DEF        &none           &kp SC(N0)      &none 
             >;
         };
         

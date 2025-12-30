@@ -41,7 +41,7 @@
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            display-name = "HOMEROW_MODS";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;                        // <---[[produces tap if held longer than tapping-term-ms]]
@@ -55,7 +55,7 @@
         compatible = "zmk,keymap";
 
         base_layer {
-            label = "Default";
+            display-name = "Default";
             bindings = <
 &kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp J           &kp L           &kp U           &kp Y           &kp SEMI
 &hm LSFT A      &hm LCTL R      &hm LALT S      &hm LGUI T      &kp D           &to WSD         &to WSD         &kp H           &hm RGUI N      &hm RALT E      &hm RCTL I      &hm RSFT O
@@ -65,7 +65,7 @@
         };
 
         nav_layer {
-            label = "Nav";
+            display-name = "Nav";
             bindings = <
 &kp MEH(F13)    &kp CA(F13)     &kp CA(F14)     &kp CA(F15)     &kp CA(F16)     &none           &none           &none           &kp PG_UP       &kp UARW        &kp HOME        &none 
 &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &kp CAPS        &kp LARW        &kp DARW        &kp RARW        &none 
@@ -75,7 +75,7 @@
         };
 
         mse_layer {
-            label = "Mouse";
+            display-name = "Mouse";
             bindings = <
 &none           &none           &none           &none           &none           &none           &none           &none           &none           &msc SCRL_UP    &none           &none 
 &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &none           &trans          &trans          &none           &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT &none 
@@ -85,7 +85,7 @@
         };
 
         sym_layer {
-            label = "Sym";
+            display-name = "Sym";
             bindings = <
 &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &none           &none           &none           &kp LT          &kp EQUAL       &kp GT          &kp TILDE
 &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp UNDER       &trans          &trans          &none           &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
@@ -95,7 +95,7 @@
         };
 
         num_layer {
-            label = "Num";
+            display-name = "Num";
             bindings = <
 &kp ESC         &kp LG(BSPC)    &kp BSPC        &kp RET         &none           &none           &none           &kp AMPS        &kp N7          &kp N8          &kp N9          &kp PIPE
 &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &none           &trans          &trans          &kp PLUS        &kp N4          &kp N5          &kp N6          &kp MINUS
@@ -105,7 +105,7 @@
         };
 
         fun_layer {
-            label = "Fun";
+            display-name = "Fun";
             bindings = <
 &kp F9          &kp F10         &kp F11         &kp F12         &none           &none           &none           &none           &none           &none           &none           &none 
 &kp F5          &kp F6          &kp F7          &kp F8          &kp F17         &trans          &trans          &none           &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
@@ -115,7 +115,7 @@
         };
 
         wna_layer {
-            label = "WinA";
+            display-name = "WinA";
             bindings = <
 &none           &kp F20         &kp LS(F20)     &kp LC(F20)     &none           &none           &none           &none           &none           &none           &none           &none 
 &none           &kp F19         &kp LS(F19)     &kp LC(F19)     &none           &trans          &trans          &none           &kp RGUI        &kp RALT        &none           &mo WNB
@@ -125,7 +125,7 @@
         };
 
         wnb_layer {
-            label = "WinB";
+            display-name = "WinB";
             bindings = <
 &none           &kp MEH(GRAVE)  &kp MEH(MINUS)  &kp MEH(EQUAL)  &none           &none           &none           &none           &none           &none           &none           &none 
 &none           &kp SC(GRAVE)   &kp SC(MINUS)   &kp SC(EQUAL)   &none           &trans          &trans          &none           &kp RGUI        &none           &none           &trans
@@ -135,7 +135,7 @@
         };
 
         adm_layer {
-            label = "Admin";
+            display-name = "Admin";
             bindings = <
 &sys_reset      &none           &none           &studio_unlock  &none           &none           &none           &kp C_BRI_UP    &kp SC(N7)      &kp SC(N8)      &kp SC(N9)      &kp C_VOL_UP 
 &none           &none           &kp LALT        &kp LGUI        &none           &trans          &trans          &kp C_BRI_DN    &kp SC(N4)      &kp SC(N5)      &kp SC(N6)      &kp C_VOL_DN 
@@ -145,7 +145,7 @@
         };
         
         wsd_layer {
-            label = "WASD";
+            display-name = "WASD";
             bindings = <
 &kp Q           &kp W           &kp E           &kp R           &kp T           &none           &none           &kp Y           &kp U           &kp I           &kp O           &kp P
 &kp A           &kp S           &kp D           &kp F           &kp G           &none           &none           &kp H           &kp J           &kp K           &kp L           &kp SEMI  

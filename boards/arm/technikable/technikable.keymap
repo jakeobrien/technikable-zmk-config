@@ -14,10 +14,10 @@
 
 #define DEF 0
 #define NAV 1
-#define MSE 2
-#define SYM 3
-#define NUM 4
-#define FUN 5
+#define SYM 2
+#define NUM 3
+#define FUN 4
+#define MSE 5
 #define WNA 6
 #define WNB 7
 #define ADM 8
@@ -60,7 +60,7 @@
 &kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp J           &kp L           &kp U           &kp Y           &kp SEMI
 &hm LSFT A      &hm LCTL R      &hm LALT S      &hm LGUI T      &kp D           &to WSD         &to WSD         &kp H           &hm RGUI N      &hm RALT E      &hm RCTL I      &hm RSFT O
 &kp Z           &kp X           &kp C           &kp V           &kp B           &to ADM         &to ADM         &kp K           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                &lt ADM ESC     &lt NAV SPACE   &lt NUM TAB     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt WNA DEL
+                                &lt ADM ESC     &lt NAV SPACE   &lt NUM RET     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt WNA DEL
             >;
         };
 
@@ -68,19 +68,9 @@
             display-name = "Nav";
             bindings = <
 &kp MEH(F13)    &kp CA(F13)     &kp CA(F14)     &kp CA(F15)     &kp CA(F16)     &none           &none           &none           &kp PG_UP       &kp UARW        &kp HOME        &none 
-&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &kp CAPS        &kp LARW        &kp DARW        &kp RARW        &none 
-&none           &none           &none           &kp LS(SEMI)    &mo MSE         &trans          &trans          &none           &kp PG_DN       &none           &kp END         &none 
-                                &none           &trans          &none           &trans          &trans          &kp BSPC        &kp RET         &kp DEL
-            >;
-        };
-
-        mse_layer {
-            display-name = "Mouse";
-            bindings = <
-&none           &none           &none           &none           &none           &none           &none           &none           &none           &msc SCRL_UP    &none           &none 
-&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &none           &trans          &trans          &none           &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT &none 
-&none           &none           &none           &trans          &none           &trans          &trans          &none           &none           &none           &none           &none 
-                                &none           &trans          &none           &trans          &trans          &mkp MCLK       &mkp LCLK       &mkp RCLK
+&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &trans          &trans          &trans          &none           &kp LARW        &kp DARW        &kp RARW        &none 
+&none           &none           &none           &kp CAPS        &none           &trans          &trans          &none           &kp PG_DN       &none           &kp END         &none 
+                                &none           &trans          &none           &trans          &trans          &kp LS(TAB)     &kp RET         &kp TAB
             >;
         };
 
@@ -90,7 +80,7 @@
 &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &none           &none           &none           &kp LT          &kp EQUAL       &kp GT          &kp TILDE
 &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp UNDER       &trans          &trans          &none           &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
 &kp LT          &kp GT          &kp LBKT        &kp RBKT        &kp CARET       &trans          &trans          &none           &kp DQT         &kp SQT         &kp GRAVE       &kp BSLH
-                                &none           &kp ESC         &none           &trans          &trans          &none           &trans          &none 
+                                &kp LS(TAB)     &kp ESC         &kp TAB         &trans          &trans          &none           &trans          &none 
             >;
         };
 
@@ -98,7 +88,7 @@
             display-name = "Num";
             bindings = <
 &kp ESC         &kp LG(BSPC)    &kp BSPC        &kp RET         &none           &none           &none           &kp AMPS        &kp N7          &kp N8          &kp N9          &kp PIPE
-&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &none           &trans          &trans          &kp PLUS        &kp N4          &kp N5          &kp N6          &kp MINUS
+&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &kp LS(SEMI)    &trans          &trans          &kp PLUS        &kp N4          &kp N5          &kp N6          &kp MINUS
 &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LG(A)       &trans          &trans          &kp ASTRK       &kp N1          &kp N2          &kp N3          &kp SLASH
                                 &none           &none           &trans          &trans          &trans          &kp EQUAL       &kp N0          &kp DOT
             >;
@@ -111,6 +101,16 @@
 &kp F5          &kp F6          &kp F7          &kp F8          &kp F17         &trans          &trans          &none           &kp RGUI        &kp RALT        &kp RCTL        &kp RSHFT
 &kp F1          &kp F2          &kp F3          &kp F4          &kp F16         &trans          &trans          &none           &none           &none           &none           &none 
                                 &kp F13         &kp F14         &kp F15         &trans          &trans          &trans          &none           &none 
+            >;
+        };
+
+        mse_layer {
+            display-name = "Mouse";
+            bindings = <
+&none           &none           &none           &none           &none           &none           &none           &none           &none           &msc SCRL_UP    &none           &none 
+&kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &none           &trans          &trans          &none           &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT &none 
+&none           &none           &none           &trans          &none           &trans          &trans          &none           &none           &none           &none           &none 
+                                &none           &trans          &none           &trans          &trans          &mkp MCLK       &mkp LCLK       &mkp RCLK
             >;
         };
 

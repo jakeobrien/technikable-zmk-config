@@ -140,7 +140,7 @@
 &sys_reset      &none           &none           &studio_unlock  &none           &none           &none           &kp C_BRI_UP    &kp SC(N7)      &kp SC(N8)      &kp SC(N9)      &kp C_VOL_UP 
 &none           &none           &kp LALT        &kp LGUI        &none           &trans          &trans          &kp C_BRI_DN    &kp SC(N4)      &kp SC(N5)      &kp SC(N6)      &kp C_VOL_DN 
 &none           &bt BT(0)       &bt BT(1)       &bt BT(2)       &bt BT_CLR      &trans          &trans          &none           &kp SC(N1)      &kp SC(N2)      &kp SC(N3)      &kp C_MUTE 
-                                &trans          &none           &none           &to DEF         &to DEF        &none           &kp SC(N0)      &none 
+                                &trans          &none           &none           &to DEF         &to DEF         &none           &kp SC(N0)      &none 
             >;
         };
         

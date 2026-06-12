@@ -18,10 +18,9 @@
 #define NUM 3
 #define FUN 4
 #define MSE 5
-#define WNA 6
-#define WNB 7
-#define ADM 8
-#define WSD 9
+#define WIN 6
+#define ADM 7
+#define WSD 8
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick-tap-ms = <200>; };
@@ -57,10 +56,10 @@
         base_layer {
             display-name = "Default";
             bindings = <
-&kp Q           &kp W           &kp F           &kp P           &kp G           &none           &none           &kp J           &kp L           &kp U           &kp Y           &kp SEMI
-&hm LSFT A      &hm LCTL R      &hm LALT S      &hm LGUI T      &kp D           &to WSD         &to WSD         &kp H           &hm RGUI N      &hm RALT E      &hm RCTL I      &hm RSFT O
-&kp Z           &kp X           &kp C           &kp V           &kp B           &to ADM         &to ADM         &kp K           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                &lt ADM ESC     &lt NAV SPACE   &lt NUM RET     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt WNA DEL
+&kp Q           &kp W           &kp F           &kp P           &kp G           &to WSD         &to WSD         &kp J           &kp L           &kp U           &kp Y           &kp SEMI
+&hm LSFT A      &hm LCTL R      &hm LALT S      &hm LGUI T      &kp D           &none           &none           &kp H           &hm RGUI N      &hm RALT E      &hm RCTL I      &hm RSFT O
+&kp Z           &kp X           &kp C           &kp V           &kp B           &none           &none           &kp K           &kp M           &kp COMMA       &kp DOT         &kp SLASH
+                                &lt WIN ESC     &lt NAV SPACE   &lt NUM RET     &to DEF         &to DEF         &lt FUN BSPC    &lt SYM SPACE   &lt ADM DEL
             >;
         };
 
@@ -114,33 +113,23 @@
             >;
         };
 
-        wna_layer {
-            display-name = "WinA";
+        win_layer {
+            display-name = "Win";
             bindings = <
-&none           &kp F20         &kp LS(F20)     &kp LC(F20)     &none           &none           &none           &none           &none           &none           &none           &none 
-&none           &kp F19         &kp LS(F19)     &kp LC(F19)     &none           &trans          &trans          &none           &kp RGUI        &kp RALT        &none           &mo WNB
-&none           &kp F18         &kp LS(F18)     &kp LC(F18)     &none           &trans          &trans          &none           &none           &none           &none           &none 
-                                &none           &kp SC(F18)     &none           &trans          &trans          &none           &none           &trans
-            >;
-        };
-
-        wnb_layer {
-            display-name = "WinB";
-            bindings = <
-&none           &kp MEH(GRAVE)  &kp MEH(MINUS)  &kp MEH(EQUAL)  &none           &none           &none           &none           &none           &none           &none           &none 
-&none           &kp SC(GRAVE)   &kp SC(MINUS)   &kp SC(EQUAL)   &none           &trans          &trans          &none           &kp RGUI        &none           &none           &trans
-&none           &kp SC(BSLH)    &kp MEH(BSLH)   &kp SC(F20)     &none           &trans          &trans          &none           &none           &none           &none           &none 
-                                &none           &kp SC(F19)     &none           &trans          &trans          &none           &none           &trans
+&none           &none           &none           &none           &none           &none           &none           &kp LS(F18)     &kp F19         &kp LS(F19)     &kp F20         &kp LS(F20)
+&none           &kp LCTRL       &kp LALT        &kp LGUI        &none           &trans          &trans          &kp F16         &kp LS(F16)     &kp F17         &kp LS(F17)     &kp F18
+&none           &none           &none           &none           &none           &trans          &trans          &kp LS(F13)     &kp F14         &kp LS(F14)     &kp F15         &kp LS(F15)
+                                &trans          &none           &none           &to DEF         &to DEF         &kp LS(LG(TAB)) &kp F13         &kp LG(TAB)
             >;
         };
 
         adm_layer {
             display-name = "Admin";
             bindings = <
-&sys_reset      &none           &none           &studio_unlock  &none           &none           &none           &kp C_BRI_UP    &kp SC(N7)      &kp SC(N8)      &kp SC(N9)      &kp C_VOL_UP 
-&none           &none           &kp LALT        &kp LGUI        &none           &trans          &trans          &kp C_BRI_DN    &kp SC(N4)      &kp SC(N5)      &kp SC(N6)      &kp C_VOL_DN 
-&none           &bt BT(0)       &bt BT(1)       &bt BT(2)       &bt BT_CLR      &trans          &trans          &none           &kp SC(N1)      &kp SC(N2)      &kp SC(N3)      &kp C_MUTE 
-                                &trans          &none           &none           &to DEF         &to DEF         &none           &kp SC(N0)      &none 
+&none           &none           &kp C_BRI_UP    &kp C_VOL_UP    &none           &none           &none           &none           &none           &none           &none           &none
+&none           &none           &kp C_BRI_DN    &kp C_VOL_DN    &none           &trans          &trans          &none           &none           &none           &none           &none
+&none           &none           &none           &kp C_MUTE      &none           &trans          &trans          &none           &none           &none           &none           &none
+                                &none           &none           &none           &to DEF         &to DEF         &none           &none           &trans 
             >;
         };
         

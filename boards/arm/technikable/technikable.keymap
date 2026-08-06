@@ -28,7 +28,6 @@
 #define BT(n) BT_SEL n
 #define CS(n) LS(LC(n))
 #define AS(n) LS(LA(n))
-#define ACS(n) LS(LC(LA((n)))
 #define GS(n) LS(LG(n))
 #define AC(n) LC(LA(n))
 #define MEH(n) LS(LC(LA(n)))
@@ -118,9 +117,9 @@
         win_layer {
             display-name = "Win";
             bindings = <
-&kp CS(F18)     &kp AS(F18)     &kp AC(F18)     &kp ACS(F18)    &none           &none           &none           &kp LA(F16)     &kp LA(F17)     &kp LA(F18)     &kp LA(F19)     &kp LA(F20)
-&kp CS(F17)     &kp AS(F17)     &kp AC(F17)     &kp ACS(F17)    &none           &none           &none           &kp LC(F16)     &kp LC(F17)     &kp LC(F18)     &kp LC(F19)     &kp LC(F20)
-&kp CS(F16)     &kp AS(F16)     &kp AC(F16)     &kp ACS(F16)    &none           &none           &none           &kp LS(F16)     &kp LS(F17)     &kp LS(F18)     &kp LS(F19)     &kp LS(F20)
+&kp CS(F18)     &kp AS(F18)     &kp AC(F18)     &kp MEH(F18)    &none           &none           &none           &kp LA(F16)     &kp LA(F17)     &kp LA(F18)     &kp LA(F19)     &kp LA(F20)
+&kp CS(F17)     &kp AS(F17)     &kp AC(F17)     &kp MEH(F17)    &none           &none           &none           &kp LC(F16)     &kp LC(F17)     &kp LC(F18)     &kp LC(F19)     &kp LC(F20)
+&kp CS(F16)     &kp AS(F16)     &kp AC(F16)     &kp MEH(F16)    &none           &none           &none           &kp LS(F16)     &kp LS(F17)     &kp LS(F18)     &kp LS(F19)     &kp LS(F20)
                                 &trans          &none           &none           &to DEF         &to DEF         &kp AS(F19)     &kp CS(F19)     &kp RGUI
             >;
         };
